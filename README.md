@@ -61,4 +61,4 @@ E-commerce Backend System Development: A backend system for an e-commerce platfo
 * Find the **Postman** collection for the apis [Here](https://api.postman.com/collections/3660213-14e822c6-bf99-4f84-a04b-1174f282b20e?access_key=PMAT-01HVFB8VBHNMT6KWAM2CP4RF2N)
   
 ## DB Schema:
-
+Check the uploaded png fine named as **DB Schema.png** or 
