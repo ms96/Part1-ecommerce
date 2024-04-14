@@ -1,0 +1,10 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+    <!-- <h1>Logged in as: {{ request.user.username }}</h1> -->
+
+    <!-- <a href="{% url 'account_logout' %}">Logout</a> -->
+    <!-- load product page after login -->
+    <script>window.location.href = "{% url 'store' %}" </script>
+    
+{% endblock content %}

@@ -1,0 +1,126 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin-top: 0;
+            text-align: center;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="email"],
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        hr {
+            margin: 20px 0;
+            border: none;
+            border-top: 1px solid #ccc;
+        }
+        h2 {
+            text-align: center;
+            margin-top: 0;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        ul li a {
+            display: block;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        ul li a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Sign Up</h1>
+    <form method="post" action="/accounts/signup/">
+        <label for="id_email">Email:</label>
+        <input type="email" name="email" placeholder="Email address" autocomplete="email" required id="id_email">
+        
+        <label for="id_username">Username:</label>
+        <input type="text" name="username" placeholder="Username" autocomplete="username" required id="id_username">
+        
+        <label for="id_password1">Password:</label>
+        <input type="password" name="password1" placeholder="Password" autocomplete="new-password" required id="id_password1">
+        
+        <label for="id_password2">Password (again):</label>
+        <input type="password" name="password2" placeholder="Password (again)" autocomplete="new-password" required id="id_password2">
+        
+        <button type="submit">Sign Up</button>
+    </form>
+
+    <hr>
+
+    <h2>Or use a third-party</h2>
+
+    <ul>
+        <li><a title="Facebook" href="/accounts/facebook/login/?process=login">Facebook</a></li>
+        <li><a title="GitHub" href="/accounts/github/login/?process=login">GitHub</a></li>
+        <li><a title="Google" href="/accounts/google/login/?process=login">Google</a></li>
+    </ul>
+</div>
+
+</body>
+</html>
+{% endblock content %}
